@@ -1,0 +1,96 @@
+@import "variables";
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $lato;
+    text-decoration: none;
+    list-style-type: none;
+    color: $white;
+    overflow-x: hidden;
+}
+
+
+
+.inner-default {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: black;
+    // h4{
+    //     background-image: url(zegar2.png)
+    // }
+
+    .header__continer{
+        @extend .inner-default;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
+            display: flex;
+
+            li{
+                margin-left: 1rem;
+            }
+        }
+    }
+
+
+}  
+
+.hero{
+    background-image: url(zegar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box  ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .hero__container{
+        @extend .inner-default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 10rem;
+        border: 0.2rem solid white;
+        background-color: black;
+        h1{
+            color: white;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+footer{
+
+    width: 100vw;
+    height: 1rem;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    background-color: black;
+
+    .footer__container{
+        @extend .inner-default;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        p{
+            color: wheat    ;
+            margin-bottom: 3rem;
+        }
+    }
+}
